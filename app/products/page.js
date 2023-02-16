@@ -18,7 +18,7 @@ export default async function ProductsPage() {
     <div>
       <div className={styles.home}>
         <Image src={banner} width="0%" height="0" className={styles.banner} />
-        <h3 className={styles.titlePage}>Global G</h3>
+        <h1 className={styles.titlePage}>Global G</h1>
         <div className={styles.description}>
           <p>
             The Global G series of knives are Global‘s classic collection of
