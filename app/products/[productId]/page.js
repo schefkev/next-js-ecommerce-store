@@ -6,11 +6,7 @@ import Products from './Products';
 
 export const dynamic = 'force-dynamic';
 
-type Props = {
-  params: { productId: string };
-};
-
-export async function generateMetaData(props: Props): Promise<Metadata> {
+export async function generateMetaData({ props }) {
   const singleProduct = await getProductById(parseInt(props.params.productId));
   if (!singleProduct) {
     return productNotFoundMetadata;
@@ -22,7 +18,7 @@ export async function generateMetaData(props: Props): Promise<Metadata> {
   };
 }
 
-export default async function ProductPage(props: Props) {
+export default async function ProductPage(props) {
   const singleProduct = await getProductById(parseInt(props.params.productId));
   if (!singleProduct) {
     notFound();
