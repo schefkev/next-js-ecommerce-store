@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
-import { productNotFoundMetadata } from './not-found';
+// import { productNotFoundMetadata } from './not-found';
 import Products from './Products';
 
 export const dynamic = 'force-dynamic';
 
-export async function generateMetaData({ props }) {
+/* export async function generateMetaData({ props }) {
   const singleProduct = await getProductById(parseInt(props.params.productId));
   if (!singleProduct) {
     return productNotFoundMetadata;
@@ -15,7 +15,7 @@ export async function generateMetaData({ props }) {
     title: singleProduct.header,
     description: `Page for ${singleProduct.header}`,
   };
-}
+} */
 
 export default async function ProductPage(props) {
   const singleProduct = await getProductById(parseInt(props.params.productId));
