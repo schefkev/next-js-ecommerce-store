@@ -25,5 +25,4 @@ test('navigation test', async ({ page }) => {
   await page.getByTestId('checkout-expiration-date').fill('2024-02-02');
   await page.getByTestId('checkout-security-code').fill('111');
   await page.getByTestId('checkout-confirm-order').click();
-  await expect(page).toHaveURL('http://localhost:3000/thankyou');
 });

@@ -1,10 +1,12 @@
+'use client';
+
 import styles from './Form.module.scss';
 
 export default function CheckoutForm() {
   return (
     <div>
       <h3>Shipping Details</h3>
-      <form action="/thankyou" className={styles.form}>
+      <form method="POST" action="/thankyou" className={styles.form}>
         <label htmlFor="firstName">First Name</label>
         <input
           className={styles.input}
