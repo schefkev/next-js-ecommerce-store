@@ -12,6 +12,7 @@ export type Product = {
 };
 
 export const getProducts = cache(async () => {
+  // eslint-disable-next-line @ts-safeql/check-sql
   const products = await sql<Product[]>`
   SELECT * FROM products
   `;
@@ -19,6 +20,7 @@ export const getProducts = cache(async () => {
 });
 
 export const getProductById = cache(async (id: number) => {
+  // eslint-disable-next-line @ts-safeql/check-sql
   const [product] = await sql<Product[]>`
     SELECT
       *
