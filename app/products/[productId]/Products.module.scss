@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  line-height: 1.5;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  min-width: 1000px;
+}
+
+.title {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.header {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.image {
+  margin-right: 100px;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.price {
+  margin-top: 48px;
+  font-size: 18px;
+}
+
+.button {
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  transition: 0.2s all;
+}
+/* Adding transformation when the button is active */
+.button:hover {
+  background-color: #3e8e41;
+}
+.button:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
