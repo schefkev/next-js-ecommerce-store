@@ -54,6 +54,7 @@ export default function Cart({ products }) {
   return (
     <div className={styles.container}>
       {productsWithAmounts.some((item) => item.amount > 0) ? (
+        // eslint-disable-next-line array-callback-return
         productsWithAmounts.map((item) => {
           if (item.amount > 0) {
             return (

@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { getParsedCookie, setStringifiedCookie } from '../../utils/cookies';
+import { getParsedCookie } from '../../utils/cookies';
 import styles from './Checkout.module.scss';
 
 export default function Checkout({ products }) {
@@ -46,6 +46,7 @@ export default function Checkout({ products }) {
       <h4>Your Order</h4>
       <div>
         {productsWithAmounts.some((item) => item.amount > 0) ? (
+          // eslint-disable-next-line array-callback-return
           productsWithAmounts.map((item) => {
             if (item.amount > 0) {
               return (

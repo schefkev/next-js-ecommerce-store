@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
 import { productNotFoundMetadata } from './not-found';
