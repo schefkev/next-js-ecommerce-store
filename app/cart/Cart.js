@@ -52,14 +52,14 @@ export default function Cart({ products }) {
 */
 
   return (
-    <div className={styles.container}>
+    <div>
       {productsWithAmounts.some((item) => item.amount > 0) ? (
         // eslint-disable-next-line array-callback-return
         productsWithAmounts.map((item) => {
           if (item.amount > 0) {
             return (
-              <div key={item.id} className={styles.left}>
-                <div key={item.id} className={styles.leftBox}>
+              <div key={item.id}>
+                <div key={item.id}>
                   <div
                     key={item.id}
                     className={styles.itemRow}
@@ -143,9 +143,9 @@ export default function Cart({ products }) {
         </div>
       )}
       {productsWithAmounts.some((item) => item.amount > 0) && (
-        <div className={styles.right}>
-          <div className={styles.rightBox}>
-            <div className={styles.total}>
+        <div>
+          <div>
+            <div>
               <p data-test-id="cart-total">Total: € {subTotal().toFixed(2)}</p>
               <Link href="checkout">
                 <button data-test-id="cart-checkout" className={styles.btn}>
