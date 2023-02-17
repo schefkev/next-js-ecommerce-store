@@ -23,7 +23,7 @@ export default function Products({ singleProduct }) {
         />
         <div className={styles.description}>{singleProduct.description}</div>
       </div>
-      <div className={styles.price} data-test-id="product-price">
+      <div data-test-id="product-price" className={styles.price}>
         {singleProduct.price} €
       </div>
       <div>

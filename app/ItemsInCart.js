@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers';
 
 export default function ItemsInCart() {
-  const cart = cookies().get('productsCookie');
+  const cart = cookies().get('cart');
   let itemInCart = [];
   if (cart) {
     itemInCart = JSON.parse(cart.value);
