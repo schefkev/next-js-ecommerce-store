@@ -15,7 +15,7 @@ test('stringify a cookie value', () => {
 
 test('set, get and delete a cookie', () => {
   const cookie = {
-    key: 'productsCookie',
+    key: 'cart',
     value: [{ id: 1, amount: 2 }],
   };
   // First, make sure that the return value of the function is undefined

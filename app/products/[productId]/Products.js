@@ -43,12 +43,12 @@ export default function Products({ singleProduct }) {
           className={styles.button}
           onClick={() => {
             // get the cookie
-            const producstInCookies = getParsedCookie('productsCookie');
+            const producstInCookies = getParsedCookie('cart');
 
             // if there is no cookie we initialize the value with 1
             if (!producstInCookies) {
               // create the cookie with a new object
-              setStringifiedCookie('productsCookie', [
+              setStringifiedCookie('cart', [
                 { id: singleProduct.id, amount: 1 },
               ]);
               // if there is no cookie stop here
@@ -75,7 +75,7 @@ export default function Products({ singleProduct }) {
             }
 
             // Update the cookie after transformation
-            setStringifiedCookie('productsCookie', producstInCookies);
+            setStringifiedCookie('cart', producstInCookies);
             router.refresh();
           }}
         >

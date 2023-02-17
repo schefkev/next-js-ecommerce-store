@@ -12,7 +12,7 @@ type Props = {
   };
 };
 
-export async function generateMetaData(props: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
   const singleProduct = await getProductById(parseInt(props.params.productId));
   if (!singleProduct) {
     return productNotFoundMetadata;

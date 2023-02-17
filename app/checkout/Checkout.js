@@ -9,7 +9,7 @@ export default function Checkout({ products }) {
   const [productsCookieValue, setProductsCookieValue] = useState(false);
 
   useEffect(() => {
-    const productsCookie = getParsedCookie('productsCookie');
+    const productsCookie = getParsedCookie('cart');
     const cookieState = productsCookie === undefined ? false : productsCookie;
     setProductsCookieValue(cookieState);
   }, []);

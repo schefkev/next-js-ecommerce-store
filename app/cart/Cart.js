@@ -11,7 +11,7 @@ export default function Cart({ products }) {
   const router = useRouter();
 
   useEffect(() => {
-    const productsCookie = getParsedCookie('productsCookie');
+    const productsCookie = getParsedCookie('cart');
     const cookieState = productsCookie === undefined ? false : productsCookie;
     setProductsCookieValue(cookieState);
   }, []);
@@ -100,36 +100,12 @@ export default function Cart({ products }) {
                           }
                         }
                         setProductsCookieValue(newProductsCookie);
-                        setStringifiedCookie(
-                          'productsCookie',
-                          newProductsCookie,
-                        );
+                        setStringifiedCookie('cart', newProductsCookie);
                         router.refresh();
                       }}
                     >
                       Remove
                     </button>
-                    {/* <button
-                  className={styles.btn}
-                  onClick={() => {
-                    if (!productsCookieValue) {
-                      return;
-                    }
-                    const newProductsCookie = [...productsCookieValue];
-                    const foundItem = newProductsCookie.find((itemInCart) => {
-                      return itemInCart.id === item.id;
-                    });
-
-                    if (foundItem) {
-                      foundItem.amount = 0;
-                    }
-                    setProductsCookieValue(newProductsCookie);
-                    setStringifiedCookie('productsCookie', newProductsCookie);
-                    router.refresh();
-                  }}
-                >
-                  Remove all
-                </button> */}
                   </div>
                 </div>
               </div>
