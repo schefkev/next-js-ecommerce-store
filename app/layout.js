@@ -23,13 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={rubik.className}>
       <head />
-      <body className={styles.container}>
+      <body>
         <header>
           <Header />
         </header>
         <CookieBanner />
-        <main /* className={styles.main} */>{children}</main>
-        <footer /* className={styles.footer} */>
+        <main className={styles.main}>{children}</main>
+        <footer className={styles.footer}>
           <Footer />
         </footer>
       </body>
